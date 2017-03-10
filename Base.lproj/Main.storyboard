@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="windmill" translatesAutoresizingMaskIntoConstraints="NO" id="bUs-Vl-CnD">
+                                <rect key="frame" x="25" y="300" width="325" height="325"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="325" id="68q-dp-6LG"/>
+                                    <constraint firstAttribute="height" constant="325" id="EVs-7h-Wl1"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MQx-If-PiK">
+                                <rect key="frame" x="41" y="240" width="39" height="30"/>
+                                <state key="normal" title="begin"/>
+                                <connections>
+                                    <action selector="beginRecorder:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MEt-vc-HwV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WM7-bV-9ei">
+                                <rect key="frame" x="303" y="240" width="31" height="30"/>
+                                <state key="normal" title="stop"/>
+                                <connections>
+                                    <action selector="stopRecorder:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pRB-dz-h56"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="bUs-Vl-CnD" secondAttribute="bottom" constant="42" id="AW5-rq-Zxs"/>
+                            <constraint firstItem="bUs-Vl-CnD" firstAttribute="top" secondItem="WM7-bV-9ei" secondAttribute="bottom" constant="30" id="GGl-Xe-XUp"/>
+                            <constraint firstItem="bUs-Vl-CnD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bYH-Q0-hoz"/>
+                            <constraint firstItem="bUs-Vl-CnD" firstAttribute="top" secondItem="MQx-If-PiK" secondAttribute="bottom" constant="30" id="fB3-qu-Nax"/>
+                            <constraint firstItem="MQx-If-PiK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="25" id="ha7-ZV-uFG"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="WM7-bV-9ei" secondAttribute="trailing" constant="25" id="viS-g5-aYK"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="windmillImageView" destination="bUs-Vl-CnD" id="ixk-Zp-hiS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="137.18140929535232"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="windmill" width="650" height="697"/>
+    </resources>
+</document>
